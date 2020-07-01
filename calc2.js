@@ -126,7 +126,7 @@ const buttonRows = 4;
 let addedButtons = 0;
 
 calcButtons.forEach((button,index)=>{
-    if (addedButtons % 4 === 0){
+    if (addedButtons % 4 === 0){ 
         inputElement.innerHTML += `<div class="row"></div>`;
     }
     const row = document.querySelector('.row:last-child');

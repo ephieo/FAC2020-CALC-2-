@@ -130,7 +130,7 @@ calcButtons.forEach((button,index)=>{
         inputElement.innerHTML += `<div class="row"></div>`;
     }
     const row = document.querySelector('.row:last-child');
-    console.log(row);
+    // console.log(row);
     row.innerHTML += `<button id="${button.name}">
 ${button.symbol}
     </button>`
@@ -138,3 +138,11 @@ ${button.symbol}
 });
 }
 createButtons();
+let del = document.querySelector('#delete');
+console.log(del);
+del.style.background = '#ffb07c'
+del.style.color = '#202020'
+let eq = document.querySelector('#calculate');
+eq.style.background = '#7ccbff'
+eq.style.color = '#202020'
+eq.style. border = '2px solid #7ccbff';

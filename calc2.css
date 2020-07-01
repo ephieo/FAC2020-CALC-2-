@@ -41,3 +41,12 @@ button{
 .row{
     width:100%;
 }
+
+@media all and (max-width:1024px){
+    
+    .calculator{
+        padding:29px;
+        height:600px;
+     
+    }
+}

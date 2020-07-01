@@ -6,14 +6,14 @@ button{
     background:#202020;
     border: 2px solid #ffb07c;
     border-radius: 10px;
-    width: 18.3vw;
-    height: 10.7vh;
+    width: 13.7vw;
+    height: 6.9vh;
 }
 .calculator{
     background:#202020;
     border: 2px solid #ffb07c;
-    width : 75vw;
-   height: 70vh;
+    width : 55vw;
+   height: 50vh;
    border-radius:10px;
 }
 .output {

@@ -121,3 +121,20 @@ let calcButtons = [
     type:'calculate'
 }
 ];
+function createButtons (){
+const buttonRows = 4;
+let addedButtons = 0;
+
+calcButtons.forEach((button,index)=>{
+    if (addedButtons % 4 === 0){
+        inputElement.innerHTML += `<div class="row"></div>`;
+    }
+    const row = document.querySelector('.row:last-child');
+    console.log(row);
+    row.innerHTML += `<button id="${button.name}">
+${button.symbol}
+    </button>`
+    addedButtons++;
+});
+}
+createButtons();

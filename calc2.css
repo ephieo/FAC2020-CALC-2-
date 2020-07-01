@@ -1,3 +1,27 @@
 body{
     background:#e9ffc9;
 }
+button{
+    color:#7ccbff;
+    background:#202020;
+    border: 2px solid #ffb07c;
+    border-radius: 10px;
+    width: 18.3vw;
+    height: 10.7vh;
+}
+.calculator{
+    background:#202020;
+    border: 2px solid #ffb07c;
+    width : 75vw;
+   height: 70vh;
+   border-radius:10px;
+}
+.output {
+    width:99%;
+    height:15vh;
+    border: 2px solid #ffb07c;
+    border-radius:10px;
+}
+.row{
+    width:100%;
+}

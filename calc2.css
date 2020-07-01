@@ -1,6 +1,12 @@
 body{
     background:#e9ffc9;
 }
+.maincont{
+    /* background:rgba(32, 32, 32, 0.5); */
+    display:grid;
+    justify-content:center;
+    padding-top: 100px;
+}
 button{
     color:#7ccbff;
     background:#202020;

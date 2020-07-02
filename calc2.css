@@ -35,6 +35,9 @@ button{
    height: 550px;
    border-radius:10px;
 }
+.operation{
+    height: 50%;
+}
 .output {
     width:99%;
     height:15vh;
@@ -42,6 +45,8 @@ button{
     border-radius:10px;
 }
 .value{
+    display:flex;
+    justify-content:flex-end;
     padding:5px;
     
 }

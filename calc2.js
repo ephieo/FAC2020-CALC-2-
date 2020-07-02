@@ -180,10 +180,10 @@ updateOutputResult(0);
     updateOutputResult(data.operation.join(''));
 }
 
-function UpdateOutputOperation (){
+function updateOutputOperation (operation){
     outputOperationElement.innerHTML = operation;
 }
-function UpdateOutputResult (){
+function updateOutputResult (result){
     outputResultElement.innerHTML = result;
 }
 

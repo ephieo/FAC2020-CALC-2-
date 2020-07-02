@@ -176,7 +176,9 @@ data.result.pop();
         }
         
     }else if (button.type === 'calculate'){
-        
+        let joinResult = data.result.join('');
+        let result = eval(joinResult);
+        updateOutputResult(result);
     }
     updateOutputResult(data.operation.join(''));
 }
@@ -187,6 +189,7 @@ function updateOutputOperation (operation){
 function updateOutputResult (result){
     outputResultElement.innerHTML = result;
 }
+
 
 inputElement.addEventListener ('click', event => {
     let targetBtn = event.target;

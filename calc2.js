@@ -178,9 +178,18 @@ data.result.pop();
     }else if (button.type === 'calculate'){
         let joinResult = data.result.join('');
         let result = eval(joinResult);
+
         updateOutputResult(result);
+
+      data.operation = [];
+      data.result =[];
+
+      data.operation.push(result);
+      data.result.push(result);
+
+      return;
     }
-    updateOutputResult(data.operation.join(''));
+    updateOutputOperation(data.operation.join(''));
 }
 
 function updateOutputOperation (operation){

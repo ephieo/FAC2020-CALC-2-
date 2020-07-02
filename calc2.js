@@ -167,11 +167,12 @@ data.result.push(button.formula);
         if(button.name === 'all-clear'){
 data.operation = [];
 data.result =[];
+updateOutputResult(0);
         
         }else if (button.name === 'delete') {
-data,operation.pop();
+data.operation.pop();
 data.result.pop();
-updateOutputResult(0);
+
         }
         
     }else if (button.type === 'calculate'){

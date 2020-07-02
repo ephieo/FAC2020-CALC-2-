@@ -134,6 +134,7 @@ calcButtons.forEach((button,index)=>{
     row.innerHTML += `<button id="${button.name}">
 ${button.symbol}
     </button>`
+   // console.log(row);
     addedButtons++;
 });
 }
@@ -146,3 +147,52 @@ let eq = document.querySelector('#calculate');
 eq.style.background = '#7ccbff'
 eq.style.color = '#202020'
 eq.style. border = '2px solid #7ccbff';
+
+// an objcect with arrays where we can push the numbers into.
+let data = {
+    operation :[],
+    result: []
+}
+
+
+function calculator(button){
+    if(button.type === 'operator'){
+data.operation.push(button.symbol);
+data.result.push(button.formula);
+    }else if (button.type === 'number'){
+        data.operation.push(button.symbol);
+data.result.push(button.formula);
+
+    }else if (button.type === 'key'){
+        if(button.name === 'all-clear'){
+data.operation = [];
+data.result =[];
+        
+        }else if (button.name === 'delete') {
+data,operation.pop();
+data.result.pop();
+updateOutputResult(0);
+        }
+        
+    }else if (button.type === 'calculate'){
+        
+    }
+    updateOutputResult(data.operation.join(''));
+}
+
+function UpdateOutputOperation (){
+    outputOperationElement.innerHTML = operation;
+}
+function UpdateOutputResult (){
+    outputResultElement.innerHTML = result;
+}
+
+inputElement.addEventListener ('click', event => {
+    let targetBtn = event.target;
+    calcButtons.forEach( button =>
+        {
+            if (button.name === targetBtn.id)calculator(button)
+        }
+   
+    )
+    })

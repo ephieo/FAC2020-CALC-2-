@@ -17,6 +17,10 @@ button{
     border-radius: 10px;
     width: 80px;
     height:80px;
+    outline:none;
+}
+button:hover{
+    border: 2px solid #e9ffc9;
 }
 .input{
     padding:3px;
@@ -37,6 +41,7 @@ button{
 }
 .operation{
     height: 50%;
+    color:rgba(233, 255, 201, 0.7);
 }
 .output {
     width:99%;

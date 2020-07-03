@@ -18,9 +18,9 @@ let calcButtons = [
 },
 {
     name:'percent',
-    symbol:'%',
-    formula:false,
-    type:'key'
+    symbol:'+/-',
+    formula:'*-1',
+    type:'operator'
 },
 
 {
@@ -160,6 +160,7 @@ function calculator(button){
 data.operation.push(button.symbol);
 data.result.push(button.formula);
     }else if (button.type === 'number'){
+        if(button.name === 'period' && data.operation.includes('.')) return;
         data.operation.push(button.symbol);
 data.result.push(button.formula);
 
@@ -177,7 +178,10 @@ data.result.pop();
         
     }else if (button.type === 'calculate'){
         let joinResult = data.result.join('');
+        //console.log(joinResult);
         let result = eval(joinResult);
+        
+        result = formatResult(result);
 
         updateOutputResult(result);
 
@@ -209,3 +213,32 @@ inputElement.addEventListener ('click', event => {
    
     )
     })
+function formatResult (result){
+   const maxNumLength = 10;
+   const precision = 5;
+if (digitCount(result) > maxNumLength){
+    if(isFloat(result)) {
+     const resultInt = parseInt(result);
+     const resultIntLength = digitCount(resultInt); 
+
+     if (resultIntLength > maxNumLength){
+         return result.toPrecision(precision);
+     }
+     else {
+       const digitsAfterPeriod = maxNumLength - resultIntLength;
+       return result.toFixed(digitsAfterPeriod);
+     }
+
+    }else{
+        return result.toPrecision(precision);
+    }
+}else{
+    return result;
+}
+}
+function digitCount (number){
+    return number.toString().length;
+}
+function isFloat(number){
+    return number % 1 != 0;
+}

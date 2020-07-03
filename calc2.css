@@ -48,6 +48,8 @@ button:hover{
     height:15vh;
     border: 2px solid #ffb07c;
     border-radius:10px;
+     word-wrap:break-word;
+    word-break:break-all;
 }
 .value{
     display:flex;
